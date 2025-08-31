@@ -1,0 +1,173 @@
+#gl-developer-info-wrapper {
+	--gdi-primary: #d20962;
+	--gdi-accent: #03a84e;
+}
+
+#gl-developer-info {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	box-sizing: border-box;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 9999999;
+}
+
+#gl-developer-info.gl-show {
+	display: block;
+}
+
+#gl-developer-info .gl-developer-info-inner {
+	background-color: #fff;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: absolute;
+	right: 50%;
+	bottom: 50%;
+	transform: translate(50%, 50%);
+	text-align: center;
+	width: 90%;
+	overflow: hidden;
+	transition: width 300ms;
+}
+
+@media (min-width: 600px) {
+	#gl-developer-info .gl-developer-info-inner {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media (min-width: 810px) {
+	#gl-developer-info .gl-developer-info-inner {
+		width: 75%;
+		max-width: 750px;
+	}
+}
+
+#gl-developer-info.gl-developer-info-minimize .gl-developer-info-inner {
+	transition: all 600ms;
+	padding: 0;
+	bottom: 40px;
+	right: 40px;
+	transform: translate(0%, 0%);
+	width: 55px !important;
+	height: 55px !important;
+	border-radius: 50px;
+	opacity: 0;
+}
+
+#gl-developer-info.gl-developer-info-pre-minimize .gl-developer-info-inner * {
+	opacity: 0;
+	transition: width 300ms;
+}
+
+#gl-developer-info .gl-developer-info-title {
+	font-size: 30px;
+	line-height: 30px;
+	margin-bottom: 15px;
+	color: #000;
+}
+
+#gl-developer-info .gl-developer-info-subtitle {
+	font-size: 18px;
+	color: #808080;
+}
+
+#gl-developer-info .gl-developer-info-subtitle a {
+	color: var(--gdi-accent);
+}
+
+#gl-developer-info-close {
+	position: absolute;
+	top: 0;
+	left: auto;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	background: var(--gdi-primary);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+#gl-developer-info-close svg {
+	width: 30px;
+	height: auto;
+	pointer-events: none;
+}
+
+#gl-developer-info-close:hover,
+#gl-developer-info-close:focus {
+	background: #a8074e;
+	color: #fff;
+}
+
+@media (max-width: 600px) {
+	#gl-developer-info .gl-developer-info-inner {
+		padding: 50px 15px;
+	}
+	
+	#gl-developer-info .gl-developer-info-title {
+		max-width: 320px;
+		margin: 0 auto 15px;
+	}
+}
+
+#gl-developer-info-open {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--gdi-primary);
+	color: #fff;
+	position: fixed;
+	top: auto;
+	left: auto;
+	right: 40px;
+	bottom: 40px;
+	z-index: 9999999;
+	width: 45px;
+	height: 45px;
+	padding: 5px;
+	border-radius: 50px;
+	cursor: pointer;
+	animation: pop 2s infinite;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: all .3s;
+}
+
+#gl-developer-info-open.gl-hide {
+	display: none;
+}
+
+#gl-developer-info-open:hover,
+#gl-developer-info-open:focus {
+	background: #a8074e;
+}
+
+#gl-developer-info-open svg {
+	width: 30px;
+	height: auto;
+	pointer-events: none;
+}
+
+@keyframes pop {
+	0%, 80%, 100% {
+		transform: scale(1);
+	}
+	85% {
+		transform: scale(1.2);
+	}
+	90% {
+		transform: scale(0.9);
+	}
+	95% {
+		transform: scale(1.1);
+	}
+}
