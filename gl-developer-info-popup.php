@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: GL Developer Info
+ * Plugin Name: GL Developer Info Popup
  * Plugin URI: https://greenlifeit.com/plugins
  * Description: A WordPress plugin to show developer information.
  * Author: Asiqur Rahman <asiq.webdev@gmail.com>
@@ -8,7 +8,7 @@
  * Version: 1.0
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: gl-developer-info
+ * Text Domain: gl-developer-info-popup
  */
 
 // Add PopUp HTML

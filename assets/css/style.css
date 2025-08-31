@@ -22,8 +22,7 @@
 
 #gl-developer-info .gl-developer-info-inner {
 	background-color: #fff;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding: 100px 30px;
 	position: absolute;
 	right: 50%;
 	bottom: 50%;
