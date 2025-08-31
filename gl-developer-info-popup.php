@@ -12,11 +12,11 @@
  */
 
 // Add PopUp HTML
-function gl_popup_html() {
+function gl_developer_info_html() {
     include( plugin_dir_path( __FILE__ ) . 'inc/popup.html' );
 }
 
-add_action( 'wp_footer', 'gl_popup_html' );
+add_action( 'wp_footer', 'gl_developer_info_html' );
 
 // Enqueue PopUp Assets
 function gl_popup_enqueue_scripts() {
