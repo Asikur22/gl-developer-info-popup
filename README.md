@@ -1,2 +1,2 @@
-# gl-developer-info
-A Simple WordPress Plugin to show a popup with developer info.
+# gl-developer-info-popup
+WordPress Plugin to show a popup with developer info.
